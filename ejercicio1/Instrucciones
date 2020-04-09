@@ -1,0 +1,43 @@
+Objetivo: 
+Crear un juego donde el player es una nave que va esquivando meteoritos, si es impactado por uno se termina el juego.
+
+Requisitos:
+- En la carpeta Assets estan todas las imagenes necesarias para realizar el juego.
+
+El juego tiene que tener:
+- Una nave que se puede mover a la izquierda y a la derecha con las flechas del teclado.
+- 4 meteoritos de distinto sprites con un desplazamiento de arriba hacia abajo.
+Y que al llegar abajo aparesca arriba y baje nuevamente
+- Al colisionar el player con un meteorito el player quede inmovil y cambie de color.
+
+Pasos a seguir:
+1. Cargar imagenes Preload.
+2. Crear fondo.
+3. Crear player y atributos(Que tope con los bordes por ejemplo).
+4. Crear meteoritos.
+5. Crear collision.
+6. Crear funcion Game over si colisiona con algun meteorito.
+7. Crear movimiento player en Update
+8. Crear movimiento meteoritos.
+9. Hacer que al llegar al final de la pantalla suba nuevamente al principio y vuelva a bajar,y asi otra vez.
+
+
+Para el paso 8 y 9 se necesita codigos que no se han visto. 
+Para realizarlos hay que saber que la pantalla se divide en widht(x) y height(y). Entonces cuando se crea un sprite por ejemplo:
+this.physics.add.sprite(x, y, imagen); >>>>> hay que colocar las cordenadas x e y para posicionar la imagen.
+
+De este modo, un ejemplo para el movimiento de los meteoritos:
+	meteorito1.y >>>>> indica la posicion Y de la variable meteorito1. Por lo tanto si colocas meteorito.y +=1; en update 
+	el meteorito1 ira bajando cada segundo. Si no se destruye o no se posiciona nuevamente el meteorito ira bajando infinitamente lo que significa
+	que ocupara memoria, por lo tanto hay q destruirlo o posicionarlo nuevamente dentro de la pantalla.
+
+Para el paso 9 puedes ocupar algo similar al anterior. 
+Para posicionarlo nuevamente en la pantalla hay que hacer un if, que quiere decir que si cumple esta condicion pasara algo.
+
+Entonces, creas un if(meteorito1.y > config.height){} >>>>>> esto indica que si el meteorito esta mas abajo de lo que muestra la pantalla algo pasara(Aqui tienes que modificar el Y del meteorito, para que aparesca arriba).
+
+
+PD: Aca revisa como me salio a mi. No necesariamente tiene que quedarte igual.  https://gabusho92.github.io/phaser3_ejercicio1/
+
+
+
