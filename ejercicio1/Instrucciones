@@ -8,6 +8,7 @@ El juego tiene que tener:
 - Una nave que se puede mover a la izquierda y a la derecha con las flechas del teclado.
 - 4 meteoritos de distinto sprites con un desplazamiento de arriba hacia abajo.
 Y que al llegar abajo aparesca arriba y baje nuevamente
+- Velocidades distintas de los meteoritos
 - Al colisionar el player con un meteorito el player quede inmovil y cambie de color.
 
 Pasos a seguir:
